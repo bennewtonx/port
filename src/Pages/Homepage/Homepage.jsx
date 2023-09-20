@@ -177,6 +177,7 @@ function Homepage() {
       </div>
     </div>
     <div className='contact-me-container'>
+      <h1>Get in touch📩</h1>
           <div className='contact-me-text'>
           <h2>If you like what you see and you have a project in mind that 
             would benefit from my services, or if you have a few questions you'd like 
