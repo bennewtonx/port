@@ -27,14 +27,21 @@
 }
 
 .spline-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; /* Set a lower z-index to place it behind other content */
-    background-color: rgb(12, 12, 12);
-    opacity: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: rgb(12, 12, 12);
+  opacity: 0.3; /* You can adjust the opacity as needed */
+  overflow: hidden; /* Hide overflowing content within the container */
+  /* Use the video as the background */
+  background: url('/cloner-cube-binary-copy (3).mp4') no-repeat center center fixed;
+  background-size: cover; /* Adjust the video size to cover the entire container */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
 }
 
 .intro-text-container {
@@ -296,7 +303,16 @@
 .contact-me-container {
   height: 100vh;
   background-color: #fbc420a4;
+  padding-top: 40px;
+}
 
+.getintouch {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+
+.contact-me-flex {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
@@ -478,7 +494,9 @@
   .contact-me-container {
     height: 100vh;
     background-color: #fbc420a4;
-  
+  }
+
+  .contact-me-flex {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -609,6 +627,10 @@
   /*Contaxt Me CSS*/
 
   .contact-me-container {
+    height: fit-content;
+  }
+
+  .contact-me-flex {
     height: fit-content;
     display: flex;
     flex-direction: column;

@@ -59,6 +59,11 @@ function Homepage() {
       <CustomScrollbar scrollYProgress={scrollYProgress} />
       <div className='homepage-container'>
         <div className='spline-container'>
+
+        <video autoPlay loop muted playsInline className='background-video'>
+        <source src='/cloner-cube-binary-copy (3).mp4' type='video/mp4' />
+        Your browser does not support the video tag.
+    </video>
           {/* This is a single line comment */}
            {/*<LoadableSpline
             className='spline'
@@ -135,7 +140,8 @@ function Homepage() {
       </div>
     </div>
     <div className='contact-me-container'>
-      <h1>Get in touch📩</h1>
+      <h1 className='getintouch'>Get in touch📩</h1>
+      <div className='contact-me-flex'>
           <div className='contact-me-text'>
           <h2>If you like what you see and you have a project in mind that 
             would benefit from my services, or if you have a few questions you'd like 
@@ -156,6 +162,7 @@ function Homepage() {
           </div>
           <p className='input-input'>{"</input>"}</p>
           </div>
+    </div>
     </div>
     </div>
   );
