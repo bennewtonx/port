@@ -130,7 +130,7 @@
     grid-gap: 10px; /* Remove the gap between grid items */
 
     border: solid 1px;
-    padding: 0px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
 }
 
 .about-me-text {
@@ -139,37 +139,37 @@
 }
 
 .about-me-image-1 {
-  height: 310px;
+  height: 300px;
   width: 200px;
   grid-area: image1; /* Updated grid area name */
 }
 
 .about-me-image-2 {
-  height: 150px;
+  height: 140px;
   width: 200px;
   grid-area: image2; /* Updated grid area name */
 }
 
 .about-me-image-3 {
-  height: 150px;
+  height: 140px;
   width: 200px;
   grid-area: image3; /* Updated grid area name */
 }
 
 .about-me-image-4 {
-  height: 150px;
+  height: 140px;
   width: 410px;
   grid-area: image4; /* Updated grid area name */
 }
 
 .about-me-image-5 {
-  height: 150px;
+  height: 140px;
   width: 200px;
   grid-area: image5; /* Updated grid area name */
 }
 
 .about-me-image-6 {
-  height: 150px;
+  height: 140px;
   width: 200px;
   grid-area: image6; /* Updated grid area name */
 }
@@ -295,7 +295,7 @@
 
 .contact-me-container {
   height: 100vh;
-  background-image: url('/assets/Untitled.png');
+  background-image: url('/Untitled.png');
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -479,7 +479,7 @@
 
   .contact-me-container {
     height: 100vh;
-    background-image: url('/assets/Untitled.png');
+    background-image: url('/Untitled.png');
     background-repeat: no-repeat;
     background-size: cover;
   
