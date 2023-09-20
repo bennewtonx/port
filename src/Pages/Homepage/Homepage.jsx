@@ -4,7 +4,7 @@ import './Homepage.css';
 import Header from '../../Components/Header/Header';
 import { motion, useScroll } from 'framer-motion';
 import CustomScrollbar from '../../Components/CustomScrollbar/CustomScrollbar';
-import { AiOutlineArrowRight, AiOutlineArrowLeft} from 'react-icons/ai'
+import { AiOutlineArrowRight, AiOutlineArrowLeft} from 'react-icons/ai';
 import { Link, animateScroll as scroll } from 'react-scroll'; // Import Link and scroll
 
 const LoadableSpline = loadable(() => import('@splinetool/react-spline'));
