@@ -23,7 +23,7 @@ function Homepage() {
   const projects = [
     {
       title: 'UniLife',
-      imageSrc: 'src/assets/Untitled design (1).png',
+      imageSrc: 'src\assets\Untitled design (1).png',
       projectUrl: 'https://strong-hamster-02ed1c.netlify.app/',
       description: 'A one-stop destination for students to find their accommodation for the next learning term. A one-stop destination for students to find their accommodation for the next learning term.',
     },
