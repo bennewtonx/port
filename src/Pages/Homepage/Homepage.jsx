@@ -102,10 +102,10 @@ function Homepage() {
       <div className='homepage-container'>
         <div className='spline-container'>
           {/* This is a single line comment */}
-           <LoadableSpline
+           {/*<LoadableSpline
             className='spline'
             scene="https://prod.spline.design/W8q3kqA0LoquIU0X/scene.splinecode"
-          />
+      />*/}
         </div>
         <div className='intro-text-container'>
           <h1 className='typewriter-text show'>
