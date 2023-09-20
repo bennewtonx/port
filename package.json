@@ -19,6 +19,7 @@
     "react-spinners": "^0.13.8"
   },
   "devDependencies": {
+    "@svgr/rollup": "^8.1.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
