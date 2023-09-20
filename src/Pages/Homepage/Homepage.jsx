@@ -56,48 +56,6 @@ function Homepage() {
 
   return (
     <div>
-      <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>
-      {isMenuOpen && (
-        <div className='menu-panel'>
-          <div className='menu-item'> {/* Use Link from react-scroll to scroll to the corresponding section */}
-          <Link
-            className='menu-item'
-            activeClass='active'
-            to='about-me-container'
-            spy={true}
-            smooth={true}
-            offset={0} // Adjust the offset as needed
-            duration={500}
-          >
-            About Me
-          </Link></div>
-          <div className='menu-item'> {/* Use Link from react-scroll to scroll to the corresponding section */}
-          <Link
-            className='menu-item'
-            activeClass='active'
-            to='projects-container'
-            spy={true}
-            smooth={true}
-            offset={0} // Adjust the offset as needed
-            duration={500}
-          >
-            Projects
-          </Link></div>
-          <div className='menu-item'> {/* Use Link from react-scroll to scroll to the corresponding section */}
-          <Link
-            className='menu-item'
-            activeClass='active'
-            to='contact-me-container'
-            spy={true}
-            smooth={true}
-            offset={0} // Adjust the offset as needed
-            duration={500}
-          >
-            Contact Me
-          </Link></div>
-          {/* Your menu items */}
-        </div>
-      )}
       <CustomScrollbar scrollYProgress={scrollYProgress} />
       <div className='homepage-container'>
         <div className='spline-container'>
