@@ -1,0 +1,620 @@
+.custom-scrollbar {
+  position: fixed;
+  right: 10px; /* Adjust the distance from the right side */
+  top: 0;
+  width: 10px; /* Adjust the width as needed */
+  height: 100vh;
+  background-color: aquamarine; /* Color of the scrollbar */
+  opacity: 0.7; /* Adjust the opacity as needed */
+  transition: opacity 0.2s;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.custom-scrollbar:hover {
+  opacity: 1;
+}
+
+/*Homepage CSS*/
+
+.homepage-container {
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Ensure the container takes up the full viewport height */
+    position: relative; /* Add relative positioning */
+}
+
+.spline-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Set a lower z-index to place it behind other content */
+    background-color: rgb(12, 12, 12);
+    opacity: 30%;
+}
+
+.intro-text-container {
+    width: 500px;
+    font-size: 20px;
+    color: white;
+    text-align: center; /* Center text horizontally */
+    z-index: 1;
+}
+
+.typewriter-text {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 1s steps(70, end) 1s,
+    blink-caret .75s step-end 1s;
+  }
+
+  .typewriter-text-unique {
+    color: aquamarine;
+    animation: bounce 2s ease 1;
+    animation-delay: 9s; /* Add a 7-second delay before the animation starts */
+    display: inline-block;
+  }
+  
+  /*Homepage Animations*/
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+    
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /*About Me Page CSS*/
+
+.about-me-container {
+  height: 100vh;
+  background-image: url('/src\assets\Untitled.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-me-text-container {
+  width: 500px;
+  color: white;
+}
+
+.about-me-text-container p {
+  font-size: 20px;
+  line-height: 2;
+}
+
+
+.about-me-image-container {
+  color: white;
+}
+
+.about-me-image-box {
+  width: 410px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    'text text'
+    'image1 image2'
+    'image1 image3'
+    'image4 image4'
+    'image5 image6';
+    grid-gap: 10px; /* Remove the gap between grid items */
+
+    border: solid 1px;
+    padding: 0px 10px 10px 10px;
+}
+
+.about-me-text {
+  text-align: center;
+  grid-area: text;
+}
+
+.about-me-image-1 {
+  height: 310px;
+  width: 200px;
+  grid-area: image1; /* Updated grid area name */
+}
+
+.about-me-image-2 {
+  height: 150px;
+  width: 200px;
+  grid-area: image2; /* Updated grid area name */
+}
+
+.about-me-image-3 {
+  height: 150px;
+  width: 200px;
+  grid-area: image3; /* Updated grid area name */
+}
+
+.about-me-image-4 {
+  height: 150px;
+  width: 410px;
+  grid-area: image4; /* Updated grid area name */
+}
+
+.about-me-image-5 {
+  height: 150px;
+  width: 200px;
+  grid-area: image5; /* Updated grid area name */
+}
+
+.about-me-image-6 {
+  height: 150px;
+  width: 200px;
+  grid-area: image6; /* Updated grid area name */
+}
+
+/*Projects CSS*/
+
+.projects-container {
+  height: 100vh;
+  background-color: rgb(12, 12, 12);
+  overflow: hidden;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.projects-header-container {
+  color: white;
+  display: flex;
+  justify-content: center;}
+
+.projects-header {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 0px;
+}
+
+.h1-up {
+  margin: 0 0 10px 0;
+  color: aquamarine;
+}
+
+.h1-down {
+  margin: 70px 0 0 0;
+  color: aquamarine;
+}
+
+.projects-go-here-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+}
+
+.project-background-0 {
+  background-color: #ff58338e; /* Example background color for the first project */
+  color: black;
+}
+
+.project-background-1 {
+  background-color: rgb(101, 68, 68); /* Example background color for the second project */
+}
+
+.project-background-2 {
+  background-color: #5CAD4A; /* Example background color for the third project */
+}
+
+.project-text-0 {
+  color: white;
+}
+
+.project-text-1 {
+  color: white;
+}
+
+.project-text-2 {
+  color: black;
+}
+
+.project-title {
+  width: 50%;
+  text-align: center;
+  border-top: solid;
+  border-left: solid;
+  border-right: solid;
+
+  margin-bottom: 80px;
+}
+
+.project-image-container {
+  display: flex; /* Use flexbox for the container */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.project-image {
+  height: 200px;
+  width: 300px;
+  border-radius: 12px;
+  margin-bottom: -50px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.project-description {
+  font-size: 12px;
+  width: 50%;
+  text-align: center;
+
+  border-bottom: solid;
+  border-left: solid;
+  border-right: solid;
+}
+
+.project-right-arrow {
+  margin-top: 100px;
+  font-size: 50px;
+  color: white;
+}
+
+.project-left-arrow {
+  margin-top: 100px;
+  font-size: 50px;
+  color: white;
+}
+
+/*contact me page css*/
+
+.contact-me-container {
+  height: 100vh;
+  background-image: url('/src\assets\Untitled.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-me-text {
+  font-size: 18px;
+  width: 300px;
+}
+
+.contact-me-form {
+  font-size: 20px;
+  width: 400px;
+}
+
+.contact-me-form input {
+  height: 80px;
+  width: 400px;
+
+  margin: 10px 0 10px 0;
+  border-radius: 24px;
+  border: none;
+}
+
+.contact-me-form input::placeholder{
+  font-size: 20px;
+  font-family: 'DM Sans', sans-serif;
+  text-indent: 10px;
+}
+
+.form-name {
+  width: 400px;
+  border-top: solid;
+  border-right: solid;
+  border-left: solid;
+
+  padding: 30px 30px 0 30px;
+}
+
+.form-email {
+  padding: 0 30px 0 30px;
+
+
+}
+
+.form-message {
+  width: 400px;
+  border-bottom: solid;
+  border-right: solid;
+  border-left: solid;
+
+  padding: 0 30px 30px 30px;
+}
+
+.form-message input::placeholder {
+  vertical-align: bottom;  
+}
+
+.form-message input {
+  height: 300px;
+}
+
+.input-input {
+  text-align: end;
+}
+
+/*MEDIA QUERIES*/
+
+/*About Me CSS*/
+
+@media (max-width: 1000px) {
+
+  .about-me-text-container {
+    width: 300px;
+
+  }
+
+  .about-me-text-container p{
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .about-me-container h1 {
+    font-size: 20px;
+  }
+
+  /*Project CSS*/
+
+  .projects-container {
+    height: 100vh;
+    background-color: rgb(12, 12, 12);
+    overflow: hidden;
+  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .projects-header-container {
+    color: white;
+    display: flex;
+    justify-content: center;}
+  
+  .projects-header {
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+  
+    margin-top: 0px;
+  }
+  
+  .project-background-0 {
+    background-color: #ff58338e; /* Example background color for the first project */
+    color: black;
+  }
+  
+  .project-background-1 {
+    background-color: rgb(101, 68, 68); /* Example background color for the second project */
+  }
+  
+  .project-background-2 {
+    background-color: #5CAD4A; /* Example background color for the third project */
+  }
+  
+  .project-text-0 {
+    color: white;
+  }
+  
+  .project-text-1 {
+    color: white;
+  }
+  
+  .project-text-2 {
+    color: black;
+  }
+  
+  .project-title {
+    width: 50%;
+    text-align: center;
+    border-top: solid;
+    border-left: solid;
+    border-right: solid;
+  
+    margin-bottom: 40px;
+  }
+  
+  
+  .project-image {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  .project-description {
+    font-size: 10px;
+    width: 50%;
+    text-align: center;
+  
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+  }
+  
+  .project-right-arrow {
+    margin-top: 100px;
+    font-size: 50px;
+    color: white;
+  }
+  
+  .project-left-arrow {
+    margin-top: 100px;
+    font-size: 50px;
+    color: white;
+  }
+
+  /*Contaxt Me CSS*/
+
+  .contact-me-container {
+    height: 100vh;
+    background-image: url('/src\assets\Untitled.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .contact-me-text {
+    font-size: 16px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .contact-me-form {
+    font-size: 16px;
+    width: 300px;
+  }
+  
+  .contact-me-form input {
+    height: 80px;
+    width: 300px;
+  
+    margin: 10px 0 10px 0;
+    border-radius: 24px;
+    border: none;
+  }
+  
+  .contact-me-form input::placeholder{
+    font-size: 16px;
+  }
+  
+  .form-name {
+    width: 300px;
+    padding: 20px 20px 0 20px;
+  }
+  
+  .form-email {
+    padding: 0 20px 0 20px;
+  }
+  
+  .form-message {
+    width: 300px;
+    padding: 0 20px 20px 20px;
+  }
+  
+  .form-message input {
+    height: 200px;
+  }
+}
+
+/*Mobile CSS*/
+
+@media (max-width: 600px) {
+
+  .about-me-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 20px;
+
+  }
+
+  /*Project CSS*/
+
+  .projects-container {
+    height: 100vh;
+    background-color: rgb(12, 12, 12);
+    overflow: hidden;
+  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .projects-header-container {
+    color: white;
+    display: flex;
+    justify-content: center;}
+  
+  .projects-header {
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+  
+    margin-top: 0px;
+  }
+  
+  .project-background-0 {
+    background-color: #ff58338e; /* Example background color for the first project */
+    color: black;
+  }
+  
+  .project-background-1 {
+    background-color: rgb(101, 68, 68); /* Example background color for the second project */
+  }
+  
+  .project-background-2 {
+    background-color: #5CAD4A; /* Example background color for the third project */
+  }
+  
+  .project-text-0 {
+    color: white;
+  }
+  
+  .project-text-1 {
+    color: white;
+  }
+  
+  .project-text-2 {
+    color: black;
+  }
+  
+  .project-title {
+    width: 70%;
+  }
+  
+  
+  .project-image {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .project-description {
+    width: 70%
+  }
+
+  /*Contaxt Me CSS*/
+
+  .contact-me-container {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+}
