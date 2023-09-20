@@ -1,13 +1,6 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react';
+import svgr from '@svgr/rollup';
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  build: {
-    rollupOptions: {
-      // Make sure to add 'react-icons' to external to prevent Vite from bundling it
-      external: ['react-icons'],
-    },
-  },
-})
+export default {
+  plugins: [react(), svgr()],
+};
