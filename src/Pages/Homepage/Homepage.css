@@ -295,9 +295,7 @@
 
 .contact-me-container {
   height: 100vh;
-  background-image: url('/Untitled.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #fbc420a4;
 
   display: flex;
   flex-wrap: nowrap;
@@ -479,9 +477,7 @@
 
   .contact-me-container {
     height: 100vh;
-    background-image: url('/Untitled.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #fbc420a4;
   
     display: flex;
     flex-wrap: nowrap;
