@@ -1,7 +1,11 @@
 // vite.config.js
 import react from '@vitejs/plugin-react';
-import svgr from '@svgr/rollup';
 
 export default {
-  plugins: [react(), svgr()],
+  plugins: [react()],
+  build: {
+    rollupOptions: {
+      external: ['react-icons/ai'], // Add this line
+    },
+  },
 };
