@@ -59,11 +59,6 @@ function Homepage() {
       <CustomScrollbar scrollYProgress={scrollYProgress} />
       <div className='homepage-container'>
         <div className='spline-container'>
-
-        <video autoPlay loop muted playsInline className='background-video'>
-        <source src='/cloner-cube-binary-copy (3).mp4' type='video/mp4' />
-        Your browser does not support the video tag.
-    </video>
           {/* This is a single line comment */}
            {/*<LoadableSpline
             className='spline'

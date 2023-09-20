@@ -36,12 +36,6 @@
   background-color: rgb(12, 12, 12);
   opacity: 0.3; /* You can adjust the opacity as needed */
   overflow: hidden; /* Hide overflowing content within the container */
-  /* Use the video as the background */
-  background: url('/cloner-cube-binary-copy (3).mp4') no-repeat center center fixed;
-  background-size: cover; /* Adjust the video size to cover the entire container */
-  display: flex; /* Use flexbox for centering */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
 }
 
 .intro-text-container {
