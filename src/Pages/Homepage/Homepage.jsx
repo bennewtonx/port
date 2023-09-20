@@ -30,6 +30,7 @@ function Homepage() {
     {
       title: 'Cinetrail',
       imageSrc: '/Untitled design (5).png',
+      projectUrl: 'https://main--inquisitive-lokum-9fb67c.netlify.app/',
       description: 'A dynamic cinema website which shows Upcoming, Best-Selling and Most Popular movies. This will give you an in-depth review to help you book your next cinema trip!',
     },
     {
