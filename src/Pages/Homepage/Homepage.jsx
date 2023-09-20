@@ -104,7 +104,7 @@ function Homepage() {
            <LoadableSpline
             className='spline'
             scene="https://prod.spline.design/W8q3kqA0LoquIU0X/scene.splinecode"
-          /> */}
+          />
         </div>
         <div className='intro-text-container'>
           <h1 className='typewriter-text show'>
