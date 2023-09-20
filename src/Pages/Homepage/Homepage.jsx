@@ -25,16 +25,17 @@ function Homepage() {
       title: 'UniLife',
       imageSrc: '/Untitled design (1).png',
       projectUrl: 'https://strong-hamster-02ed1c.netlify.app/',
-      description: 'A one-stop destination for students to find their accommodation for the next learning term. A one-stop destination for students to find their accommodation for the next learning term.',
+      description: 'A one-stop destination for students to find their accommodation for the next learning term using interactive filters and a regularly updated API.',
     },
     {
       title: 'Cinetrail',
-      imageSrc: '/PXL_20220903_110357963~3.jpg',
+      imageSrc: '/Untitled design (5).png',
       description: 'A dynamic cinema website which shows Upcoming, Best-Selling and Most Popular movies. This will give you an in-depth review to help you book your next cinema trip!',
     },
     {
       title: 'Rick and Morty',
-      imageSrc: '/Screenshot_20230916-184417.png',
+      imageSrc: '/Untitled design (6).png',
+      projectUrl: 'https://main--teal-smakager-e827d8.netlify.app/',
       description: 'Using API this application allows users to search for all Rick and Morty characters using several filters including the ability to search the cast per episode. Features real-time updates.',
     },
     // Add more projects as needed
