@@ -23,7 +23,7 @@ function Homepage() {
   const projects = [
     {
       title: 'UniLife',
-      imageSrc: '/assets/Untitled design (1).png',
+      imageSrc: '/Untitled design (1).png',
       projectUrl: 'https://strong-hamster-02ed1c.netlify.app/',
       description: 'A one-stop destination for students to find their accommodation for the next learning term. A one-stop destination for students to find their accommodation for the next learning term.',
     },
@@ -34,7 +34,7 @@ function Homepage() {
     },
     {
       title: 'Rick and Morty',
-      imageSrc: 'src/assets/Screenshot_20230916-184417.png',
+      imageSrc: '/Screenshot_20230916-184417.png',
       description: 'Using API this application allows users to search for all Rick and Morty characters using several filters including the ability to search the cast per episode. Features real-time updates.',
     },
     // Add more projects as needed
@@ -129,12 +129,12 @@ function Homepage() {
         <div className='about-me-image-container'>
           <h3 className='about-me-text'>A snapshot into my life 📸</h3>
           <div className='about-me-image-box'>
-            <img className='about-me-image-1' src='src\assets\Screenshot_20230916-184257.png' />
-            <img className='about-me-image-2' src='src\assets\PXL_20220814_152855209~3.jpg' />
-            <img className='about-me-image-3' src='src\assets\PXL_20220903_110357963~3.jpg' />
-            <img className='about-me-image-4' src='src\assets\PXL_20220827_205549937~2.jpg' />
-            <img className='about-me-image-5' src='src\assets\Screenshot_20230916-184417.png' />
-            <img className='about-me-image-6' src='src\assets\original_c5a82060-d62c-4ddb-836e-c1c88cab72cf_Snapchat-1028475772.jpg' />
+            <img className='about-me-image-1' src='\Screenshot_20230916-184257.png' />
+            <img className='about-me-image-2' src='\PXL_20220814_152855209~3.jpg' />
+            <img className='about-me-image-3' src='\PXL_20220903_110357963~3.jpg' />
+            <img className='about-me-image-4' src='\PXL_20220827_205549937~2.jpg' />
+            <img className='about-me-image-5' src='\Screenshot_20230916-184417.png' />
+            <img className='about-me-image-6' src='\original_c5a82060-d62c-4ddb-836e-c1c88cab72cf_Snapchat-1028475772.jpg' />
           </div>
         </div>
       </div>
