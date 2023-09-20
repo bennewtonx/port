@@ -29,7 +29,7 @@ function Homepage() {
     },
     {
       title: 'Cinetrail',
-      imageSrc: 'src/assets/PXL_20220903_110357963~3.jpg',
+      imageSrc: '/PXL_20220903_110357963~3.jpg',
       description: 'A dynamic cinema website which shows Upcoming, Best-Selling and Most Popular movies. This will give you an in-depth review to help you book your next cinema trip!',
     },
     {
