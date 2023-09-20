@@ -57,7 +57,7 @@
   .typewriter-text-unique {
     color: aquamarine;
     animation: bounce 2s ease 1;
-    animation-delay: 9s; /* Add a 7-second delay before the animation starts */
+    animation-delay: 3s; /* Add a 7-second delay before the animation starts */
     display: inline-block;
   }
   
@@ -616,5 +616,9 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
+  }
+
+  .contact-me-form {
+    margin-left: -45px;
   }
 }

@@ -33,7 +33,7 @@ function Header({ isMenuOpen, toggleMenu }) {
   return (
     <div className={`header-container ${isVisible ? 'visible' : 'hidden'}`}>
           <div className='logo'>
-            <img src='src\assets\B.png' alt='Logo' />
+            <img src='/B.png' alt='Logo' />
           </div>
           <div className='header-hr'>
             <hr className='header-bottom' />
