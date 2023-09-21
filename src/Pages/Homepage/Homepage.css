@@ -307,7 +307,6 @@
 }
 
 .contact-me-flex {
-  height: 100vh;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
@@ -368,7 +367,7 @@
 }
 
 .form-message input {
-  height: 250px;
+  height: 200px;
 }
 
 .input-input {
