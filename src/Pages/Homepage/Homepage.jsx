@@ -21,12 +21,12 @@ function Homepage() {
 
 
   const projects = [
-    {
+   /* {
       title: 'UniLife',
       imageSrc: '/Untitled design (1).png',
       projectUrl: 'https://strong-hamster-02ed1c.netlify.app/',
       description: 'A one-stop destination for students to find their accommodation for the next learning term using interactive filters and a regularly updated API.',
-    },
+    },*/
     {
       title: 'Cinetrail',
       imageSrc: '/Untitled design (5).png',
