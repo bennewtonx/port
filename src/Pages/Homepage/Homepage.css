@@ -307,6 +307,7 @@
 }
 
 .contact-me-flex {
+  height: 100vh;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
