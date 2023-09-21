@@ -6,11 +6,86 @@ import { motion, useScroll } from 'framer-motion';
 import CustomScrollbar from '../../Components/CustomScrollbar/CustomScrollbar';
 import { AiOutlineArrowRight} from 'react-icons/ai';
 import { AiOutlineArrowLeft} from 'react-icons/ai';
+import { MailSlurp } from 'mailslurp-client';
 import { Link, animateScroll as scroll } from 'react-scroll'; // Import Link and scroll
+import axios from 'axios';
+
+const API_KEY = "654272a82c6d2028a417e366a63d8bc04d4badd1492d3b04784f3c2899385932";
 
 const LoadableSpline = loadable(() => import('@splinetool/react-spline'));
 
 function Homepage() {
+
+  const [formData, setFormData] = useState({
+    name: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  
+    // Create an inbox to get the sender's ID
+    const inbox1 = await createInbox();
+  
+    // Include recipient email (your MailSlurp email) in the request data
+    const emailData = {
+      senderId: inbox1.id,
+      to: "your@mailslurp.com", // Replace with your MailSlurp email
+      subject: formData.subject,
+      body: formData.message,
+    };
+  
+    // Send the email to your MailSlurp email address using MailSlurp API
+    axios({
+      method: "POST",
+      url: `https://api.mailslurp.com/sendEmail?apiKey=${API_KEY}`,
+      data: emailData,
+    })
+      .then((response) => {
+        console.log('Email sent successfully');
+        // Optionally, you can show a success message or reset the form
+      })
+      .catch((error) => {
+        console.error('Error sending email', error);
+        // Optionally, you can show an error message
+      });
+  
+    // Reset the form after submission
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
+  };
+
+  async function createInbox() {
+    try {
+      const response = await axios.post(`https://api.mailslurp.com/createInbox?apiKey=${API_KEY}`);
+      const inbox = response.data;
+      console.log(`Created inbox with email address: ${inbox.emailAddress}`);
+      return inbox;
+    } catch (error) {
+      console.error('Error creating inbox', error);
+    }
+  }
+
+  async function receiveEmail() {
+    try {
+      const email = await axios.get(`https://api.mailslurp.com/waitForLatestEmail?apiKey=${API_KEY}&inboxId=${inbox2.id}`);
+      console.log('Received email:', email.data);
+    } catch (error) {
+      console.error('Error receiving email', error);
+    }
+  }
+
+
   const { scrollY, scrollYProgress } = useScroll(); // Track scroll position and progress
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -137,30 +212,51 @@ function Homepage() {
       </div>
     </div>
     <div className='contact-me-container'>
-      <h1 className='getintouch'>Get in touch📩</h1>
-      <div className='contact-me-flex'>
+        <h1 className='getintouch'>Get in touch📩</h1>
+        <div className='contact-me-flex'>
           <div className='contact-me-text'>
-          <h2>If you like what you see and you have a project in mind that 
-            would benefit from my services, or if you have a few questions you'd like 
-            to throw me way, please do get in touch! Fill out the form on the right 
-            and I'll get back to you asap!
-          </h2>
+            <h2>If you like what you see and you have a project in mind that 
+              would benefit from my services, or if you have a few questions you'd like 
+              to throw my way, please do get in touch! Fill out the form on the right 
+              and I'll get back to you asap!
+            </h2>
           </div>
           <div className='contact-me-form'>
-            <p>{"<input>"}</p>
-            <div className='form-name'>
-          <input type='text' placeholder='Name'/>
+            <form onSubmit={handleSubmit}>
+              <p>{"<input>"}</p>
+              <div className='form-name'>
+                <input
+                  type='text'
+                  placeholder='Name'
+                  name='name'
+                  value={formData.name}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className='form-email'>
+            <input
+              type='text'
+              placeholder='Recipient Email'
+              name='subject'
+              value={formData.subject}
+              onChange={handleInputChange}
+            />
+              </div>
+              <div className='form-message'>
+                <input
+                  type='text'
+                  placeholder='Type your message here'
+                  name='message'
+                  value={formData.message}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <p className='input-input'>{"</input>"}</p>
+              <button className='submit-button'type='submit'>Submit</button> {/* Add a Submit button */}
+            </form>
           </div>
-          <div className='form-email'>
-          <input type='text' placeholder='Email'/>
-          </div>
-          <div className='form-message'>
-          <input type='text' placeholder='Type your message here'/>
-          </div>
-          <p className='input-input'>{"</input>"}</p>
-          </div>
-    </div>
-    </div>
+        </div>
+      </div>
     </div>
   );
 }

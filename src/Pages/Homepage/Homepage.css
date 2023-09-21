@@ -374,6 +374,16 @@
   text-align: end;
 }
 
+.submit-button {
+  height: 50px;
+  width: 100px;
+
+  margin-bottom: 20px;
+
+  border-radius: 24px;
+  background-color: transparent;
+}
+
 /*MEDIA QUERIES*/
 
 /*About Me CSS*/
