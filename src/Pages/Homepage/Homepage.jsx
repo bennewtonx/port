@@ -9,11 +9,12 @@ import { AiOutlineArrowLeft} from 'react-icons/ai';
 import { MailSlurp } from 'mailslurp-client';
 import { Link, animateScroll as scroll } from 'react-scroll'; // Import Link and scroll
 import axios from 'axios';
-
+import ScrollAnimation from '../../Components/ScrollAnimation';
+import ScrollAnimationMiddle from './../../Components/ScrollAnimationMiddle';
+import ScrollAnimationLeft from '../../Components/ScrollAnimationLeft';
 const API_KEY = "654272a82c6d2028a417e366a63d8bc04d4badd1492d3b04784f3c2899385932";
 
 const LoadableSpline = loadable(() => import('@splinetool/react-spline'));
-
 function Homepage() {
 
   const [formData, setFormData] = useState({
@@ -142,13 +143,16 @@ function Homepage() {
             scene="https://prod.spline.design/W8q3kqA0LoquIU0X/scene.splinecode"
       />*/}
         </div>
+        <ScrollAnimationMiddle threshold={0.5}>
         <div className='intro-text-container'>
           <h1 className='typewriter-text show'>
             Hey! My name's <span className='typewriter-text-unique'>Ben.</span> Welcome to my website!
           </h1>
         </div>
+        </ScrollAnimationMiddle>
       </div>
       <div className='about-me-container'>
+      <ScrollAnimation threshold={0.5}>
         <div className='about-me-text-container'>
           <h1>{"<About>"}</h1>
           <p>
@@ -161,6 +165,8 @@ function Homepage() {
           </p>
           <h1>{"</About>"}</h1>
         </div>
+        </ScrollAnimation>
+        <ScrollAnimationLeft threshold={0.5}>
         <div className='about-me-image-container'>
           <h3 className='about-me-text'>A snapshot into my life 📸</h3>
           <div className='about-me-image-box'>
@@ -172,8 +178,10 @@ function Homepage() {
             <img className='about-me-image-6' src='\original_c5a82060-d62c-4ddb-836e-c1c88cab72cf_Snapchat-1028475772.jpg' />
           </div>
         </div>
+        </ScrollAnimationLeft>
       </div>
       <div className={`projects-container project-background-${currentProjectIndex}`}>
+      <ScrollAnimationMiddle threshold={0.5}>
       <div className='projects-header-container'>
         <div className={`projects-header project-text-${currentProjectIndex}`}>
           <p className='h1-up'>{"<h1>"}</p>
@@ -181,7 +189,6 @@ function Homepage() {
           <p className='h1-down'>{"</h1>"}</p>
         </div>
       </div>
-
       <div className='projects-go-here-container'>
         <div className={`project-title project-text-${currentProjectIndex}`}>
           <h1>{projects[currentProjectIndex].title}</h1>
@@ -206,14 +213,18 @@ function Homepage() {
         
 
       </div>
+      </ScrollAnimationMiddle>
 
       {/* Add buttons for navigating between projects */}
       <div className='project-navigation'>
       </div>
     </div>
     <div className='contact-me-container'>
-        <h1 className='getintouch'>Get in touch📩</h1>
+    <ScrollAnimationMiddle threshold={0.5}>
+        <h1 className='getintouch'>Get in touch</h1> 
+    </ScrollAnimationMiddle>
         <div className='contact-me-flex'>
+        <ScrollAnimation threshold={0.5}>
           <div className='contact-me-text'>
             <h2>If you like what you see and you have a project in mind that 
               would benefit from my services, or if you have a few questions you'd like 
@@ -221,6 +232,8 @@ function Homepage() {
               and I'll get back to you asap!
             </h2>
           </div>
+          </ScrollAnimation>
+          <ScrollAnimationLeft threshold={0.5}>
           <div className='contact-me-form'>
             <form onSubmit={handleSubmit}>
               <p>{"<input>"}</p>
@@ -255,6 +268,7 @@ function Homepage() {
               <button className='submit-button'type='submit'>Submit</button> {/* Add a Submit button */}
             </form>
           </div>
+          </ScrollAnimationLeft>
         </div>
       </div>
     </div>
