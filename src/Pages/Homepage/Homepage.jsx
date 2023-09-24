@@ -91,7 +91,7 @@ function Homepage() {
       title: 'Paint Perfection',
       imageSrc: '/Untitled design (11).png',
       projectUrl: 'https://main--paint-perfection.netlify.app/',
-      description: 'Explore the vibrant world of Paint Perfection. Immerse yourself in a symphony of colors and emotions. Discover captivating landscapes, portraits, and abstract creations. Experience artistry that transcends imagination.',
+      description: 'Explore the vibrant world of Paint Perfection. Immerse yourself in a symphony of colors and emotions. Discover captivating landscapes, portraits, and abstract creations.',
     },
     {
       title: 'Cinetrail',
