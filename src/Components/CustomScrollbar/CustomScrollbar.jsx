@@ -6,7 +6,7 @@ import { motion, useScroll } from 'framer-motion';
         <motion.div
         className='custom-scrollbar'
         style={{
-          scaleY: scrollYProgress, // Use scaleY to adjust the height
+          scaleY: scrollYProgress, 
         }}
       ></motion.div>
       

@@ -10,7 +10,7 @@
     align-items: center;
 
     background-color: rgb(12, 12, 12);
-    transition: transform 0.3s; /* Add a transition for smooth visibility changes */
+    transition: transform 0.3s; 
 
 }
 
@@ -19,7 +19,7 @@
   }
   
   .hidden {
-    transform: translateY(-50px); /* Adjust the height as needed */
+    transform: translateY(-50px); 
     }
   
 
@@ -45,7 +45,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 300px; /* Use 100vh to make it full height of the viewport */
+    height: 300px; 
     width: 100%;
 
     display: flex;

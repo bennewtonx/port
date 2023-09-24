@@ -10,21 +10,17 @@ function Header({ isMenuOpen, toggleMenu }) {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
 
-      // Check the scroll direction
       if (prevScrollPos > currentScrollPos) {
-        setIsVisible(true); // Scrolling up, show the header
+        setIsVisible(true); 
       } else {
-        setIsVisible(false); // Scrolling down, hide the header
+        setIsVisible(false); 
       }
 
-      // Update the previous scroll position
       setPrevScrollPos(currentScrollPos);
     };
 
-    // Add a scroll event listener
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the listener when the component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

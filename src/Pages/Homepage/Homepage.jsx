@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import loadable from '@loadable/component';
 import './Homepage.css';
-import Header from '../../Components/Header/Header';
 import { motion, useScroll } from 'framer-motion';
 import CustomScrollbar from '../../Components/CustomScrollbar/CustomScrollbar';
 import { AiOutlineArrowRight} from 'react-icons/ai';
 import { AiOutlineArrowLeft} from 'react-icons/ai';
 import { MailSlurp } from 'mailslurp-client';
-import { Link, animateScroll as scroll } from 'react-scroll'; // Import Link and scroll
 import axios from 'axios';
 import ScrollAnimation from '../../Components/ScrollAnimation';
 import ScrollAnimationMiddle from './../../Components/ScrollAnimationMiddle';
 import ScrollAnimationLeft from '../../Components/ScrollAnimationLeft';
 const API_KEY = "654272a82c6d2028a417e366a63d8bc04d4badd1492d3b04784f3c2899385932";
 
-const LoadableSpline = loadable(() => import('@splinetool/react-spline'));
 function Homepage() {
 
   const [formData, setFormData] = useState({
@@ -31,18 +27,15 @@ function Homepage() {
   const handleSubmit = async (event) => {
     event.preventDefault();
   
-    // Create an inbox to get the sender's ID
     const inbox1 = await createInbox();
   
-    // Include recipient email (your MailSlurp email) in the request data
     const emailData = {
       senderId: inbox1.id,
-      to: "your@mailslurp.com", // Replace with your MailSlurp email
+      to: "your@mailslurp.com",
       subject: formData.subject,
       body: formData.message,
     };
   
-    // Send the email to your MailSlurp email address using MailSlurp API
     axios({
       method: "POST",
       url: `https://api.mailslurp.com/sendEmail?apiKey=${API_KEY}`,
@@ -50,14 +43,11 @@ function Homepage() {
     })
       .then((response) => {
         console.log('Email sent successfully');
-        // Optionally, you can show a success message or reset the form
       })
       .catch((error) => {
         console.error('Error sending email', error);
-        // Optionally, you can show an error message
       });
   
-    // Reset the form after submission
     setFormData({
       name: '',
       email: '',
@@ -121,12 +111,10 @@ function Homepage() {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
   const showNextProject = () => {
-    // Increment the project index to show the next project
     setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % projects.length);
   };
 
   const showPreviousProject = () => {
-    // Decrement the project index to show the previous project
     setCurrentProjectIndex((prevIndex) =>
       prevIndex === 0 ? projects.length - 1 : prevIndex - 1
     );
@@ -136,13 +124,6 @@ function Homepage() {
     <div>
       <CustomScrollbar scrollYProgress={scrollYProgress} />
       <div className='homepage-container'>
-        <div className='spline-container'>
-          {/* This is a single line comment */}
-           {/*<LoadableSpline
-            className='spline'
-            scene="https://prod.spline.design/W8q3kqA0LoquIU0X/scene.splinecode"
-      />*/}
-        </div>
         <ScrollAnimationMiddle threshold={0.5}>
         <div className='intro-text-container'>
           <h1 className='typewriter-text show'>
@@ -214,8 +195,6 @@ function Homepage() {
 
       </div>
       </ScrollAnimationMiddle>
-
-      {/* Add buttons for navigating between projects */}
       <div className='project-navigation'>
       </div>
     </div>
