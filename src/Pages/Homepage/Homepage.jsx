@@ -87,12 +87,12 @@ function Homepage() {
 
 
   const projects = [
-   /* {
-      title: 'UniLife',
-      imageSrc: '/Untitled design (1).png',
-      projectUrl: 'https://strong-hamster-02ed1c.netlify.app/',
-      description: 'A one-stop destination for students to find their accommodation for the next learning term using interactive filters and a regularly updated API.',
-    },*/
+   {
+      title: 'Paint Perfection',
+      imageSrc: '/Untitled design (11).png',
+      projectUrl: 'https://main--paint-perfection.netlify.app/',
+      description: 'Explore the vibrant world of Paint Perfection. Immerse yourself in a symphony of colors and emotions. Discover captivating landscapes, portraits, and abstract creations. Experience artistry that transcends imagination.',
+    },
     {
       title: 'Cinetrail',
       imageSrc: '/Untitled design (5).png',
