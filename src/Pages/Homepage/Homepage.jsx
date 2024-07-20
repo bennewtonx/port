@@ -85,7 +85,7 @@ function Homepage() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-
+//Projects
   const projects = [
    {
       title: 'Paint Perfection',
@@ -105,9 +105,10 @@ function Homepage() {
       projectUrl: 'https://main--teal-smakager-e827d8.netlify.app/',
       description: 'Using API this application allows users to search for all Rick and Morty characters using several filters including the ability to search the cast per episode. Features real-time updates.',
     },
-    // Add more projects as needed
+//Add more projects as needed
   ];
 
+//Allows projects to be changed
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
   const showNextProject = () => {
@@ -123,6 +124,7 @@ function Homepage() {
   return (
     <div>
       <CustomScrollbar scrollYProgress={scrollYProgress} />
+
       <div className='homepage-container'>
         <ScrollAnimationMiddle threshold={0.5}>
         <div className='intro-text-container'>
